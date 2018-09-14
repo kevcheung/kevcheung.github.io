@@ -1,28 +1,13 @@
 .App {
-  text-align: center;
-}
+  min-height: 2500px; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+.name {
+  font-family: Noto Sans, Roboto;
+  margin-top: 1em;
+  font-size: 4em; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
+.contactInfo {
+  font-family: Roboto, Noto Sans; }
 
 .App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  font-size: large; }
