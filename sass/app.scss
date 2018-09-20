@@ -1,14 +1,16 @@
 .App{
     min-height: 2500px;
+    background-image: linear-gradient(rgb(97, 213, 218), rgb(147, 211, 214));
 }
 .name{
-    font-family: Noto Sans, Roboto;
+    font-family: $main-font;
+    color: $main-color;
     margin-top: 1em;
     font-size: 4em;
 }
 .contactInfo{
-    font-family: Roboto, Noto Sans;
-    
+    font-family: $content-font;
+    color: $main-color;
 }
 .App-intro{
     font-size: large;

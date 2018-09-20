@@ -1,0 +1,44 @@
+.navbar{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 100%;
+    background-color: $background-color;
+}
+.logo{
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.burger{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    // z-index: 300;
+    span{
+        display: block;
+        height: 5px;
+        width: 30px;
+        background-color: $main-color;
+        border-radius: 100px;
+        &:nth-child(-n+3){
+            margin-bottom: 5px;
+        }
+    }
+}
+.nav-links{
+    margin-top: 50px;
+    margin-right: 10px;
+    height: 100%;
+    background-color: $main-color;
+    .link{
+        font-family: $content-font;
+        color: $background-color;
+        &:nth-child(-n+5){
+            margin-bottom: 10px;
+        }
+    }
+}
