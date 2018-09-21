@@ -1,16 +1,18 @@
 .App{
-    min-height: 2500px;
+    min-height: 3000px;
     background-image: linear-gradient(rgb(97, 213, 218), rgb(147, 211, 214));
 }
 .name{
     font-family: $main-font;
     color: $main-color;
-    margin-top: 1em;
-    font-size: 4em;
+    padding-top: 100px;
+    width: 50px;
+    font-size: 40px;
 }
 .contactInfo{
     font-family: $content-font;
     color: $main-color;
+    font-size: 15px;
 }
 .App-intro{
     font-size: large;

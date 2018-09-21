@@ -1,20 +1,37 @@
-.navbar{
+.mobile-nav{
     display: flex;
     position: fixed;
     justify-content: space-between;
     top: 0;
     left: 0;
-    height: 64px;
-    width: 100%;
-    background-color: $background-color;
+    width: 95%;
+    height: 50px;
+    // margin-top: 10px;
+    // margin-left: 10px;
+    // margin-right: 10px;
+    padding: 10px 10px 0;
+    background-color: $content-color;
 }
 .logo{
     width: 50px;
-    margin-top: 10px;
-    margin-left: 10px;
+    height: 50px;
+}
+.burger-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    &.slideIn{
+        // right: 10px;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        background-color: $main-color;
+        height: 100vh;
+        padding: 0 20px;
+    }
 }
 .burger{
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
     // z-index: 300;
@@ -28,17 +45,23 @@
             margin-bottom: 5px;
         }
     }
+    &.active{
+        // position: absolute;
+        // top: 10px;
+        // right: 10px;
+        span{
+            background-color: $content-color;
+        }
+    }
 }
 .nav-links{
-    margin-top: 50px;
-    margin-right: 10px;
-    height: 100%;
-    background-color: $main-color;
+    margin-top: 80px;
     .link{
         font-family: $content-font;
-        color: $background-color;
+        color: $content-color;
+        font-weight: bold;
         &:nth-child(-n+5){
-            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
     }
 }

@@ -7,8 +7,8 @@ class Home extends Component {
             <div>
                 <Navbar/>
                 <h1 className="name">Kevin Cheung</h1>
-                <h2 className="contactInfo">469-826-7986</h2>
-                <h2 className="contactInfo">kevinchikitcheung@gmail.com</h2>
+                <p className="contactInfo">469-826-7986</p>
+                <p className="contactInfo">kevinchikitcheung@gmail.com</p>
             </div>
         );
     }

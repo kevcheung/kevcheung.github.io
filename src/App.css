@@ -1,38 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:700|Roboto");
 .App {
-  min-height: 2500px;
+  min-height: 3000px;
   background-image: linear-gradient(#61d5da, #93d3d6); }
 
 .name {
   font-family: "Noto Sans", sans-serif;
   color: #ffffff;
-  margin-top: 1em;
-  font-size: 4em; }
+  padding-top: 100px;
+  width: 50px;
+  font-size: 40px; }
 
 .contactInfo {
   font-family: "Roboto", sans-serif;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 15px; }
 
 .App-intro {
   font-size: large; }
 
-.navbar {
+.mobile-nav {
   display: flex;
   position: fixed;
   justify-content: space-between;
   top: 0;
   left: 0;
-  height: 64px;
-  width: 100%;
+  width: 95%;
+  height: 50px;
+  padding: 10px 10px 0;
   background-color: #61d5da; }
 
 .logo {
   width: 50px;
-  margin-top: 10px;
-  margin-left: 10px; }
+  height: 50px; }
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .burger-menu.slideIn {
+    background-color: #ffffff;
+    height: 100vh;
+    padding: 0 20px; }
 
 .burger {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px; }
   .burger span {
@@ -43,14 +54,14 @@
     border-radius: 100px; }
     .burger span:nth-child(-n+3) {
       margin-bottom: 5px; }
+  .burger.active span {
+    background-color: #61d5da; }
 
 .nav-links {
-  margin-top: 50px;
-  margin-right: 10px;
-  height: 100%;
-  background-color: #ffffff; }
+  margin-top: 80px; }
   .nav-links .link {
     font-family: "Roboto", sans-serif;
-    color: #61d5da; }
+    color: #61d5da;
+    font-weight: bold; }
     .nav-links .link:nth-child(-n+5) {
-      margin-bottom: 10px; }
+      margin-bottom: 25px; }

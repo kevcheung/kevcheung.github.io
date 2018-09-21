@@ -8,6 +8,7 @@ class Nav extends Component{
         }
         this.openMenu = this.openMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
+        this.menuClick = this.menuClick.bind(this);
         this.homeScroll = this.homeScroll.bind(this);
         this.aboutScroll = this.aboutScroll.bind(this);
         this.skillScroll = this.skillScroll.bind(this);
@@ -20,6 +21,9 @@ class Nav extends Component{
     }
     closeMenu = () => {
         this.setState({ menuSlide: false }, () =>{ document.removeEventListener('click', this.closeMenu) });
+    }
+    menuClick = () => {
+        this.setState({ menuSlide: false })
     }
     homeScroll = () => {
         window.scrollTo({ top: 0, behavior: "smooth"});
@@ -37,22 +41,24 @@ class Nav extends Component{
         window.scrollTo({ top: 2000, behavior: "smooth"});
     } 
     render(){
+        console.log(this.state.menuSlide)
         return(
-            <div className='navbar'>
+            <div className='mobile-nav'>
                 <p className='logo' onClick={this.homeScroll}>Logo</p>
-                <div className='burger'>
-                {/* need to put onClick in this div */}
-                    <span/>
-                    <span/>
-                    <span/>
+                <div className={'burger-menu ' + (this.state.menuSlide ? 'slideIn' : '')}>
+                    <div onClick={this.openMenu} className={'burger ' + (this.state.menuSlide ? 'active' : '')} >
+                        <span/>
+                        <span/>
+                        <span/>
+                    </div>
+                    <ul className='nav-links' onClick={this.menuClick}>
+                        <li className='link' onClick={this.aboutScroll}>About Me</li>
+                        <li className='link' onClick={this.skillScroll}>Skills</li>
+                        <li className='link' onClick={this.projScroll}>Projects</li>
+                        <li className='link' onClick={this.expScroll}>Experience</li>
+                        <li className='link' onClick={this.homeScroll}>Home</li>
+                    </ul>
                 </div>
-                <ul className='nav-links'>
-                    <li className='link' onClick={this.aboutScroll}>About Me</li>
-                    <li className='link' onClick={this.skillScroll}>Skills</li>
-                    <li className='link' onClick={this.projScroll}>Projects</li>
-                    <li className='link' onClick={this.expScroll}>Experience</li>
-                    <li className='link' onClick={this.homeScroll}>Home</li>
-                </ul>
             </div>
         );
     }
