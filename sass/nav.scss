@@ -17,17 +17,20 @@
     height: 50px;
 }
 .burger-menu{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    width: 100px;
+    height: 100vh;
+    align-items: center;
     &.slideIn{
         // right: 10px;
         // position: absolute;
         // top: 0;
         // right: 0;
+        width: 150px;
         background-color: $main-color;
-        height: 100vh;
-        padding: 0 20px;
+        transition: all 0.5s;
     }
 }
 .burger{
@@ -55,7 +58,13 @@
     }
 }
 .nav-links{
+    display: flex;
+    flex-direction: column;
     margin-top: 80px;
+    margin-left: 35px;
+    &.noDisplay{
+        display: none;
+    }
     .link{
         font-family: $content-font;
         color: $content-color;

@@ -51,7 +51,7 @@ class Nav extends Component{
                         <span/>
                         <span/>
                     </div>
-                    <ul className='nav-links' onClick={this.menuClick}>
+                    <ul className={'nav-links ' + (this.state.menuSlide ? '' : 'noDisplay')} onClick={this.menuClick}>
                         <li className='link' onClick={this.aboutScroll}>About Me</li>
                         <li className='link' onClick={this.skillScroll}>Skills</li>
                         <li className='link' onClick={this.projScroll}>Projects</li>

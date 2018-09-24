@@ -7,12 +7,14 @@
   font-family: "Noto Sans", sans-serif;
   color: #ffffff;
   padding-top: 100px;
+  margin-left: 10px;
   width: 50px;
   font-size: 40px; }
 
 .contactInfo {
   font-family: "Roboto", sans-serif;
   color: #ffffff;
+  margin-left: 10px;
   font-size: 15px; }
 
 .App-intro {
@@ -34,13 +36,16 @@
   height: 50px; }
 
 .burger-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0; }
+  right: 0;
+  width: 100px;
+  height: 100vh;
+  align-items: center; }
   .burger-menu.slideIn {
+    width: 150px;
     background-color: #ffffff;
-    height: 100vh;
-    padding: 0 20px; }
+    transition: all 0.5s; }
 
 .burger {
   position: absolute;
@@ -58,7 +63,12 @@
     background-color: #61d5da; }
 
 .nav-links {
-  margin-top: 80px; }
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-left: 35px; }
+  .nav-links.noDisplay {
+    display: none; }
   .nav-links .link {
     font-family: "Roboto", sans-serif;
     color: #61d5da;
