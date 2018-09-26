@@ -4,10 +4,11 @@ class Nav extends Component{
     constructor(){
         super();
         this.state = {
-            menuSlide: false
+            menuSlide: false,
+            refreshSlide: true
         }
         this.openMenu = this.openMenu.bind(this);
-        this.closeMenu = this.closeMenu.bind(this);
+        // this.closeMenu = this.closeMenu.bind(this);
         this.menuClick = this.menuClick.bind(this);
         this.homeScroll = this.homeScroll.bind(this);
         this.aboutScroll = this.aboutScroll.bind(this);
@@ -17,13 +18,13 @@ class Nav extends Component{
     }
     openMenu = (e) => {
         e.preventDefault();
-        this.setState({ menuSlide: !this.state.menuSlide }, () => { document.addEventListener('click', this.closeMenu)});
+        this.setState({ menuSlide: !this.state.menuSlide, refreshSlide: false });
     }
-    closeMenu = () => {
-        this.setState({ menuSlide: false }, () =>{ document.removeEventListener('click', this.closeMenu) });
-    }
+    // closeMenu = () => {
+    //     this.setState({ menuSlide: false }, () =>{ document.removeEventListener('click', this.closeMenu) });
+    // }
     menuClick = () => {
-        this.setState({ menuSlide: false })
+        this.setState({ menuSlide: false, refreshSlide: false })
     }
     homeScroll = () => {
         window.scrollTo({ top: 0, behavior: "smooth"});
@@ -42,22 +43,29 @@ class Nav extends Component{
     } 
     render(){
         console.log(this.state.menuSlide)
+        console.log(this.state.refreshSlide)
         return(
             <div className='mobile-nav'>
                 <p className='logo' onClick={this.homeScroll}>Logo</p>
-                <div className={'burger-menu ' + (this.state.menuSlide ? 'slideIn' : '')}>
-                    <div onClick={this.openMenu} className={'burger ' + (this.state.menuSlide ? 'active' : '')} >
+                {this.state.menuSlide && (
+                    <div onClick={() => this.setState({ menuSlide: false })} className='mobile-site'/>
+                )}
+                <div className={'burger-menu ' + (this.state.menuSlide ? 'slideIn' : '')
+                 + (!this.state.menuSlide && !this.state.refreshSlide ? 'slideOut' : '')
+                 }>
+                    <div onClick={this.openMenu} className={'burger ' + (this.state.menuSlide ? 'active' : '') 
+                    + (!this.state.menuSlide && !this.state.refreshSlide ? 'inactive' : '')} >
                         <span/>
                         <span/>
                         <span/>
                     </div>
-                    <ul className={'nav-links ' + (this.state.menuSlide ? '' : 'noDisplay')} onClick={this.menuClick}>
-                        <li className='link' onClick={this.aboutScroll}>About Me</li>
-                        <li className='link' onClick={this.skillScroll}>Skills</li>
-                        <li className='link' onClick={this.projScroll}>Projects</li>
-                        <li className='link' onClick={this.expScroll}>Experience</li>
-                        <li className='link' onClick={this.homeScroll}>Home</li>
-                    </ul>
+                    <div className={'nav-links ' + (this.state.menuSlide ? '' : 'noDisplay')} onClick={this.menuClick}>
+                        <p className='link' onClick={this.aboutScroll}>About Me</p>
+                        <p className='link' onClick={this.skillScroll}>Skills</p>
+                        <p className='link' onClick={this.projScroll}>Projects</p>
+                        <p className='link' onClick={this.expScroll}>Experience</p>
+                        <p className='link' onClick={this.homeScroll}>Home</p>
+                    </div>
                 </div>
             </div>
         );
