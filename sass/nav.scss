@@ -69,17 +69,13 @@
             background-color: $content-color;
             transition: 0.5s;
             &:first-child{
-                transform: rotate(-45deg) translate(0, 10px);
-                width: 35px;
+                transform: rotate(-45deg) translate(-8px , 9px);
             }
             &:nth-child(2){
-                // background-color: $main-color;
-                display: none;
+                background-color: transparent;
             }
             &:last-child{
-                margin-top: 10px;
-                transform: rotate(45deg) translate(0, -10px);
-                width: 35px;
+                transform: rotate(45deg) translate(-5px, -6px);
             }
         }
     }

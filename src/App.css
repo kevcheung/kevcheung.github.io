@@ -75,14 +75,11 @@
     background-color: #61d5da;
     transition: 0.5s; }
     .burger.active span:first-child {
-      transform: rotate(-45deg) translate(0, 10px);
-      width: 35px; }
+      transform: rotate(-45deg) translate(-8px, 9px); }
     .burger.active span:nth-child(2) {
-      display: none; }
+      background-color: transparent; }
     .burger.active span:last-child {
-      margin-top: 10px;
-      transform: rotate(45deg) translate(0, -10px);
-      width: 35px; }
+      transform: rotate(45deg) translate(-5px, -6px); }
   .burger.inactive span {
     transition: 0.5s; }
 
