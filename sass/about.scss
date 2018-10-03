@@ -1,0 +1,26 @@
+.about{
+    position: relative;
+    margin-top: 100px;
+    margin-left: 20px;
+    width: 90%;
+    z-index: 4;
+    background: $main-color;
+    @include break(mobile){
+        height: 20em;
+        clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
+    }
+}
+.aboutMe{
+    position: relative;
+    font-family: $main-font;
+    color: $content-color;
+    font-size: 25px;
+}
+.meGraph{
+    position: relative;
+    font-family: $content-font;
+    color: $content-color;
+    @include break(mobile){
+        font-size: 15px;
+    }
+}

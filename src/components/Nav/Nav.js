@@ -42,8 +42,8 @@ class Nav extends Component{
         window.scrollTo({ top: 2000, behavior: "smooth"});
     } 
     render(){
-        console.log(this.state.menuSlide)
-        console.log(this.state.refreshSlide)
+        // console.log(this.state.menuSlide)
+        // console.log(this.state.refreshSlide)
         return(
             <div className='mobile-nav'>
                 <p className='logo' onClick={this.homeScroll}>Logo</p>

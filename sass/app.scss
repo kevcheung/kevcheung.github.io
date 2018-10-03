@@ -1,21 +1,6 @@
 .App{
+    position: relative;
     min-height: 3000px;
-    background-image: linear-gradient(rgb(97, 213, 218), rgb(147, 211, 214));
-}
-.name{
-    font-family: $main-font;
-    color: $main-color;
-    padding-top: 100px;
-    margin-left: 10px;
-    width: 50px;
-    font-size: 40px;
-}
-.contactInfo{
-    font-family: $content-font;
-    color: $main-color;
-    margin-left: 10px;
-    font-size: 15px;
-}
-.App-intro{
-    font-size: large;
+    // background-image: linear-gradient(rgb(97, 213, 218), rgb(147, 211, 214));
+    z-index: 1;
 }

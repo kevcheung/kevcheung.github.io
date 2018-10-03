@@ -1,24 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:700|Roboto");
 .App {
+  position: relative;
   min-height: 3000px;
-  background-image: linear-gradient(#61d5da, #93d3d6); }
-
-.name {
-  font-family: "Noto Sans", sans-serif;
-  color: #ffffff;
-  padding-top: 100px;
-  margin-left: 10px;
-  width: 50px;
-  font-size: 40px; }
-
-.contactInfo {
-  font-family: "Roboto", sans-serif;
-  color: #ffffff;
-  margin-left: 10px;
-  font-size: 15px; }
-
-.App-intro {
-  font-size: large; }
+  z-index: 1; }
 
 .mobile-nav {
   display: flex;
@@ -27,17 +11,17 @@
   top: 0;
   left: 0;
   width: 95%;
-  height: 50px;
+  height: 35px;
   padding: 10px 10px 0;
-  background-color: #61d5da; }
+  background-color: #429093;
+  z-index: 100; }
 
 .mobile-site {
   position: fixed;
   top: 0;
   right: 0;
   width: 100vw;
-  height: 100vh;
-  z-index: 50; }
+  height: 100vh; }
 
 .logo {
   position: fixed;
@@ -51,10 +35,10 @@
   width: 1px;
   height: 100vh;
   align-items: center;
-  z-index: 100; }
+  z-index: 300; }
   .burger-menu.slideIn {
     width: 150px;
-    background-color: #ffffff;
+    background-color: #edfdff;
     transition: all 0.5s; }
   .burger-menu.slideOut {
     transition: all 0.5s; }
@@ -67,12 +51,12 @@
     display: block;
     height: 5px;
     width: 30px;
-    background-color: #ffffff;
+    background-color: #edfdff;
     border-radius: 100px; }
     .burger span:nth-child(-n+3) {
       margin-bottom: 5px; }
   .burger.active span {
-    background-color: #61d5da;
+    background-color: #429093;
     transition: 0.5s; }
     .burger.active span:first-child {
       transform: rotate(-45deg) translate(-8px, 9px); }
@@ -92,8 +76,89 @@
     display: none; }
   .nav-links .link {
     font-family: "Roboto", sans-serif;
-    color: #61d5da;
+    color: #429093;
     font-weight: 700;
     width: 70px; }
     .nav-links .link:nth-child(-n+5) {
       margin-bottom: 25px; }
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 45px;
+  padding-top: 100px;
+  width: 100%;
+  background: #429093;
+  z-index: 5; }
+  @media (max-width: 37.5em) {
+    .landing {
+      height: 20em;
+      clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%); } }
+
+@media (max-width: 37.5em) {
+  .contact {
+    position: relative;
+    margin-left: 20px; } }
+
+.name {
+  font-family: "Noto Sans", sans-serif;
+  color: #edfdff;
+  font-size: 40px; }
+
+.contactInfo {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #edfdff; }
+  @media (max-width: 37.5em) {
+    .contactInfo {
+      display: flex;
+      flex-direction: column;
+      font-size: 15px; } }
+
+.headshot {
+  position: absolute;
+  margin-left: 180px;
+  margin-top: -20px;
+  border-radius: 50%; }
+  @media (max-width: 37.5em) {
+    .headshot {
+      position: relative;
+      margin-left: 20px;
+      margin-top: 0;
+      width: 150px;
+      height: auto; } }
+
+.about {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 20px;
+  width: 90%;
+  z-index: 4;
+  background: #edfdff; }
+  @media (max-width: 37.5em) {
+    .about {
+      height: 20em;
+      clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%); } }
+
+.aboutMe {
+  position: relative;
+  font-family: "Noto Sans", sans-serif;
+  color: #429093;
+  font-size: 25px; }
+
+.meGraph {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: #429093; }
+  @media (max-width: 37.5em) {
+    .meGraph {
+      font-size: 15px; } }
+
+.skills {
+  background: #429093;
+  z-index: -1; }
+  @media (max-width: 37.5em) {
+    .skills {
+      height: 20em;
+      clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%); } }
