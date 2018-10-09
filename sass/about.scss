@@ -1,22 +1,30 @@
 .about{
     position: relative;
-    margin-top: 100px;
-    margin-left: 20px;
-    width: 90%;
-    z-index: 4;
+    padding-top: 150px;
+    margin-top: -85px;
+    width: 100%;
+    z-index: 1;
     background: $main-color;
     @include break(mobile){
-        height: 20em;
-        clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
+        height: 25em;
+        clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
     }
 }
-.aboutMe{
+.aboutText{
+    margin: 0 20px;
+}
+.blueTitle{
     position: relative;
     font-family: $main-font;
     color: $content-color;
     font-size: 25px;
+    &.aboutMe{
+        @include break(mobile){
+            margin-top: 50px;
+        }
+    }
 }
-.meGraph{
+.smallContent{
     position: relative;
     font-family: $content-font;
     color: $content-color;

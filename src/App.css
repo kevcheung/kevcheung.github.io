@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:700|Roboto");
 .App {
   position: relative;
-  min-height: 3000px;
+  min-height: 5000px;
   z-index: 1; }
 
 .mobile-nav {
@@ -39,7 +39,8 @@
   .burger-menu.slideIn {
     width: 150px;
     background-color: #edfdff;
-    transition: all 0.5s; }
+    transition: all 0.5s;
+    box-shadow: -5px 0px 150px -30px #484848; }
   .burger-menu.slideOut {
     transition: all 0.5s; }
 
@@ -86,15 +87,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 45px;
-  padding-top: 100px;
+  padding-top: 150px;
   width: 100%;
   background: #429093;
-  z-index: 5; }
+  z-index: 1; }
   @media (max-width: 37.5em) {
     .landing {
-      height: 20em;
-      clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%); } }
+      height: 25em;
+      clip-path: polygon(50% 0, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0); } }
 
 @media (max-width: 37.5em) {
   .contact {
@@ -131,34 +131,113 @@
 
 .about {
   position: relative;
-  margin-top: 100px;
-  margin-left: 20px;
-  width: 90%;
-  z-index: 4;
+  padding-top: 150px;
+  margin-top: -85px;
+  width: 100%;
+  z-index: 1;
   background: #edfdff; }
   @media (max-width: 37.5em) {
     .about {
-      height: 20em;
-      clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%); } }
+      height: 25em;
+      clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0); } }
 
-.aboutMe {
+.aboutText {
+  margin: 0 20px; }
+
+.blueTitle {
   position: relative;
   font-family: "Noto Sans", sans-serif;
   color: #429093;
   font-size: 25px; }
+  @media (max-width: 37.5em) {
+    .blueTitle.aboutMe {
+      margin-top: 50px; } }
 
-.meGraph {
+.smallContent {
   position: relative;
   font-family: "Roboto", sans-serif;
   color: #429093; }
   @media (max-width: 37.5em) {
-    .meGraph {
+    .smallContent {
       font-size: 15px; } }
 
 .skills {
-  background: #429093;
-  z-index: -1; }
+  position: relative;
+  padding-top: 150px;
+  margin-top: -85px;
+  width: 100%;
+  z-index: 1;
+  background: #429093; }
   @media (max-width: 37.5em) {
     .skills {
-      height: 20em;
-      clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%); } }
+      height: 25em;
+      clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0); } }
+
+.whiteTitle {
+  margin: 0 20px;
+  position: relative;
+  font-family: "Noto Sans", sans-serif;
+  color: #edfdff;
+  font-size: 25px; }
+  .whiteTitle.skill {
+    margin-top: -50px;
+    margin-bottom: 10px; }
+
+@media (max-width: 37.5em) {
+  .iconSection {
+    display: grid;
+    grid: auto-flow/repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 20px; } }
+
+.oneSkill {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (max-width: 37.5em) {
+    .oneSkill {
+      margin: 5px; } }
+
+@media (max-width: 37.5em) {
+  .skillIcon {
+    width: 50px;
+    height: 50px; } }
+
+.smallTitle {
+  font-family: "Roboto", sans-serif;
+  color: #edfdff;
+  text-align: center; }
+  @media (max-width: 37.5em) {
+    .smallTitle {
+      font-size: 15px;
+      margin: 5px; } }
+
+.projects {
+  position: relative;
+  padding-top: 150px;
+  margin-top: -85px;
+  width: 100%;
+  z-index: 1;
+  background: #edfdff; }
+  @media (max-width: 37.5em) {
+    .projects {
+      height: 25em;
+      clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0); } }
+
+.projectName {
+  font-size: 15px; }
+
+.used {
+  color: #429093; }
+
+@media (max-width: 37.5em) {
+  .imgSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto; } }
+
+@media (max-width: 37.5em) {
+  .imgSection .images {
+    width: 300px;
+    height: auto; } }

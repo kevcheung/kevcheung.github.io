@@ -30,17 +30,17 @@ class Nav extends Component{
         window.scrollTo({ top: 0, behavior: "smooth"});
     }
     aboutScroll = () => {
-        window.scrollTo({ top: 500, behavior: "smooth"});
+        window.scrollTo({ top: 420, behavior: "smooth"});
     }
     skillScroll = () => {
-        window.scrollTo({ top: 1000, behavior: "smooth"});
+        window.scrollTo({ top: 885, behavior: "smooth"});
     }
     projScroll = () => {
-        window.scrollTo({ top: 1500, behavior: "smooth"});
+        window.scrollTo({ top: 1350, behavior: "smooth"});
     }
     expScroll = () => {
         window.scrollTo({ top: 2000, behavior: "smooth"});
-    } 
+    }
     render(){
         // console.log(this.state.menuSlide)
         // console.log(this.state.refreshSlide)

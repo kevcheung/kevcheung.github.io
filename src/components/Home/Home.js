@@ -5,7 +5,6 @@ import About from '../About/About.js';
 import Skills from '../Skills/Skills.js';
 import Projects from '../Projects/Projects.js';
 import Experience from '../Experience/Experience.js';
-import Education from '../Education/Education.js';
 
 class Home extends Component {
     render() {
@@ -17,7 +16,6 @@ class Home extends Component {
                 <Skills/>
                 <Projects/>
                 <Experience/>
-                <Education/>
             </div>
         );
     }
