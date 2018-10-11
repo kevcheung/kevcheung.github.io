@@ -1,19 +1,12 @@
-.projects{
-    position: relative;
-    padding-top: 150px;
-    margin-top: -85px;
-    width: 100%;
-    z-index: 1;
-    background: $main-color;
+.project{
     @include break(mobile){
-        height: 25em;
-        clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+        margin-top: -50px;
     }
 }
 .projectName{
     font-size: 15px;
 }
-.used{
+.blueText{
     color: $content-color;
 }
 .imgSection{

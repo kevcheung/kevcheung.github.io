@@ -4,7 +4,7 @@ import headshot from '../../assets/headshot.jpg';
 class Landing extends Component {
     render() {
         return (
-            <div className='landing'>
+            <div className='landBackground'>
                     <img className='headshot' src={headshot} alt="headshot"/>
                 <div className='contact'>
                     <h1 className='name'>Kevin Cheung</h1>

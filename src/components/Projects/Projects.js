@@ -41,24 +41,26 @@ class Projects extends Component {
                         <h1 className='blueTitle projectName'>{name}</h1>
                         <p className='smallContent'>{description}</p>
                     <div className='tech'>
-                        <h2 className='smallTitle used'>Technologies Used: {technologies}</h2>
+                        <h2 className='smallTitle blueText'>Technologies Used: {technologies}</h2>
                     </div>
-                    <div className='imgSection'>
+                    {/* <div className='imgSection'>
                         <img className='images' src={img1}/>
                         <img className='images' src={img2}/>
                         <img className='images' src={img3}/>
-                    </div>
+                    </div> */}
                     <div className='projectlinks'>
-                        <h2 className='smallContent'>URL: {url}</h2>
+                        <h2 className='smallContent url'>URL: {url}</h2>
                         <h2 className='smallContent'>GitHub: {github}</h2>
                     </div>
                 </div>
         ));
         return (
-            <div className='projects'>
-                <h1 className='blueTitle projectTitle'>Projects</h1>
-                <div className='projectSection'>
-                    {projectDisplay}
+            <div className='background whiteBack'>
+                <div className='content'>
+                    <h1 className='blueTitle'>Projects</h1>
+                        <div className='projectSection'>
+                            {projectDisplay}
+                        </div>
                 </div>
             </div>
         );

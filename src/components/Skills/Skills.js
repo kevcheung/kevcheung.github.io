@@ -71,7 +71,7 @@ class Skills extends Component {
                 </div>
         ));
         return (
-            <div className='skills'>
+            <div className='background blueBack'>
                     <h1 className='whiteTitle skill'>Skills</h1>
                 <div className='iconSection'>
                     {displaySkill}

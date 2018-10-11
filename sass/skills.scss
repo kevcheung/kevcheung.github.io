@@ -1,24 +1,16 @@
-.skills{
-    position: relative;
-    padding-top: 150px;
-    margin-top: -85px;
-    width: 100%;
-    z-index: 1;
+.blueBack{
     background: $content-color;
-    @include break(mobile){
-        height: 25em;
-        clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
-    }
 }
 .whiteTitle{
-    margin: 0 20px;
+    // margin: 0 20px;
     position: relative;
     font-family: $main-font;
     color: $main-color;
     font-size: 25px;
     &.skill{
-        margin-top: -50px;
-        margin-bottom: 10px;
+        margin: -50px 20px 10px;
+        // margin-top: -50px;
+        // margin-bottom: 10px;
     }
 }
 .iconSection{
