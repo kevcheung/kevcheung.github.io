@@ -12,9 +12,9 @@ class Projects extends Component {
         this.state = {
             projects: [
                 {
-                    name: 'Swafli - Team Project',
+                    name: 'Swafli | Team Project',
                     description: 'Swafli is a web application that allows the user to stream music, add songs to a favorites list, and share their own music with other users.',
-                    technologies: 'React, Redux, Node.js, PostgreSQL, SCSS, Firebase',
+                    technologies: 'React | Redux | Node.js | PostgreSQL | SCSS | Firebase',
                     img1: swafli1,
                     img2: swafli2,
                     img3: swafli3,
@@ -22,9 +22,9 @@ class Projects extends Component {
                     github: 'https://github.com/pandora-clone/pandora-clone'
                 },
                 {
-                    name: 'door/door (Door to Door) - Sole Developer',
+                    name: 'door/door (Door to Door) | Sole Developer',
                     description: "Door to Door is a web application that allows members of a specific homeowner's association to search for their neighborhood and fees as well as communicate with other members.",
-                    technologies: 'React, Redux, Node.js, PostgreSQL, Auth0',
+                    technologies: 'React | Redux | Node.js | PostgreSQL | Auth0',
                     img1: door1,
                     img2: door2,
                     img3: door3,
@@ -37,30 +37,26 @@ class Projects extends Component {
     render() {
         let projectDisplay;
         projectDisplay = this.state.projects.map(({name, description, technologies, img1, img2, img3, url, github}) => (
-                <div className='oneProject'>
-                        <h1 className='blueTitle projectName'>{name}</h1>
-                        <p className='smallContent'>{description}</p>
-                    <div className='tech'>
-                        <h2 className='smallTitle blueText'>Technologies Used: {technologies}</h2>
-                    </div>
+                <div className='one'>
+                        <h1 className='blueTitle smallName topSpace'>{name}</h1>
+                        <h2 className='smallContent'>{technologies}</h2>
+                        <p className='smallContent paragraph'>{description}</p>
                     {/* <div className='imgSection'>
                         <img className='images' src={img1}/>
                         <img className='images' src={img2}/>
                         <img className='images' src={img3}/>
                     </div> */}
                     <div className='projectlinks'>
-                        <h2 className='smallContent url'>URL: {url}</h2>
-                        <h2 className='smallContent'>GitHub: {github}</h2>
+                        <p className='smallContent'>URL: <a className='projectLink' href={url}>{url}</a></p>
+                        <p className='smallContent'>GitHub: <a className='projectLink' href={github}>{github}</a></p>
                     </div>
                 </div>
         ));
         return (
-            <div className='background whiteBack'>
+            <div className='background whiteBack project'>
                 <div className='content'>
                     <h1 className='blueTitle'>Projects</h1>
-                        <div className='projectSection'>
-                            {projectDisplay}
-                        </div>
+                    {projectDisplay}
                 </div>
             </div>
         );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from '../../assets/icons/logo.svg';
 
 class Nav extends Component{
     constructor(){
@@ -30,43 +31,47 @@ class Nav extends Component{
         window.scrollTo({ top: 0, behavior: "smooth"});
     }
     aboutScroll = () => {
-        window.scrollTo({ top: 420, behavior: "smooth"});
+        window.scrollTo({ top: 430, behavior: "smooth"});
     }
     skillScroll = () => {
-        window.scrollTo({ top: 885, behavior: "smooth"});
+        window.scrollTo({ top: 855, behavior: "smooth"});
     }
     projScroll = () => {
-        window.scrollTo({ top: 1350, behavior: "smooth"});
+        window.scrollTo({ top: 1280, behavior: "smooth"});
     }
     expScroll = () => {
-        window.scrollTo({ top: 2000, behavior: "smooth"});
+        window.scrollTo({ top: 1945, behavior: "smooth"});
     }
     render(){
+        let nav;
+        nav = <div className='nav'>
+                        <img className='logo' onClick={this.homeScroll} src={logo}/>
+                        {this.state.menuSlide && (
+                            <div onClick={() => this.setState({ menuSlide: false })} className='mobile-site'/>
+                        )}
+                        <div className={'burger-menu ' + (this.state.menuSlide ? 'slideIn' : '')
+                        + (!this.state.menuSlide && !this.state.refreshSlide ? 'slideOut' : '')
+                        }>
+                            <div onClick={this.openMenu} className={'burger ' + (this.state.menuSlide ? 'active' : '') 
+                            + (!this.state.menuSlide && !this.state.refreshSlide ? 'inactive' : '')} >
+                                <span/>
+                                <span/>
+                                <span/>
+                            </div>
+                            <div className={'nav-links ' + (this.state.menuSlide ? '' : 'slideOut')} onClick={this.menuClick}>
+                                <p className='link' onClick={this.aboutScroll}>About Me</p>
+                                <p className='link' onClick={this.skillScroll}>Skills</p>
+                                <p className='link' onClick={this.projScroll}>Projects</p>
+                                <p className='link' onClick={this.expScroll}>Experience</p>
+                                <p className='link' onClick={this.homeScroll}>Home</p>
+                            </div>
+                        </div>
+                    </div>
         // console.log(this.state.menuSlide)
         // console.log(this.state.refreshSlide)
         return(
-            <div className='mobile-nav'>
-                <p className='logo' onClick={this.homeScroll}>Logo</p>
-                {this.state.menuSlide && (
-                    <div onClick={() => this.setState({ menuSlide: false })} className='mobile-site'/>
-                )}
-                <div className={'burger-menu ' + (this.state.menuSlide ? 'slideIn' : '')
-                 + (!this.state.menuSlide && !this.state.refreshSlide ? 'slideOut' : '')
-                 }>
-                    <div onClick={this.openMenu} className={'burger ' + (this.state.menuSlide ? 'active' : '') 
-                    + (!this.state.menuSlide && !this.state.refreshSlide ? 'inactive' : '')} >
-                        <span/>
-                        <span/>
-                        <span/>
-                    </div>
-                    <div className={'nav-links ' + (this.state.menuSlide ? '' : 'noDisplay')} onClick={this.menuClick}>
-                        <p className='link' onClick={this.aboutScroll}>About Me</p>
-                        <p className='link' onClick={this.skillScroll}>Skills</p>
-                        <p className='link' onClick={this.projScroll}>Projects</p>
-                        <p className='link' onClick={this.expScroll}>Experience</p>
-                        <p className='link' onClick={this.homeScroll}>Home</p>
-                    </div>
-                </div>
+            <div>
+                {nav}
             </div>
         );
     }

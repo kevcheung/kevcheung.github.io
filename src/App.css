@@ -1,21 +1,56 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:700|Roboto");
 .App {
   position: relative;
-  min-height: 4000px;
   background: black;
-  z-index: 1; }
+  z-index: 1;
+  min-height: 2615px; }
 
-.mobile-nav {
+.blueTitle {
+  position: relative;
+  font-family: "Noto Sans", sans-serif;
+  color: #429093;
+  font-size: 25px; }
+  @media (min-width: 50em) {
+    .blueTitle {
+      font-size: 30px; } }
+
+.whiteTitle {
+  position: relative;
+  font-family: "Noto Sans", sans-serif;
+  color: #edfdff;
+  font-size: 25px; }
+  @media (min-width: 50em) {
+    .whiteTitle {
+      font-size: 30px; } }
+
+.blueBack {
+  background: #429093; }
+
+.whiteBack {
+  background: #edfdff; }
+
+.smallTitle {
+  font-family: "Roboto", sans-serif;
+  color: #edfdff;
+  text-align: center; }
+  @media (max-width: 37.5em) {
+    .smallTitle {
+      font-size: 15px;
+      margin: 5px; } }
+
+.nav {
   display: flex;
   position: fixed;
-  justify-content: space-between;
   top: 0;
   left: 0;
-  width: 95%;
+  width: 100%;
   height: 35px;
   padding: 10px 10px 0;
   background-color: #429093;
   z-index: 100; }
+  @media (min-width: 50em) {
+    .nav {
+      height: 60px; } }
 
 .mobile-site {
   position: fixed;
@@ -26,8 +61,14 @@
 
 .logo {
   position: fixed;
-  width: 50px;
-  height: 50px; }
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: auto;
+  border-radius: 20%; }
+  @media (min-width: 50em) {
+    .logo {
+      width: 50px; } }
 
 .burger-menu {
   position: fixed;
@@ -49,6 +90,9 @@
   position: fixed;
   top: 10px;
   right: 10px; }
+  @media (min-width: 50em) {
+    .burger {
+      display: none; } }
   .burger span {
     display: block;
     height: 5px;
@@ -72,17 +116,28 @@
 .nav-links {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
-  margin-left: 35px; }
-  .nav-links.noDisplay {
-    display: none; }
+  margin: 80px 40px 0; }
+  @media (min-width: 50em) {
+    .nav-links {
+      flex-direction: row;
+      justify-content: space-around;
+      position: fixed;
+      right: 0;
+      margin-top: 25px; } }
   .nav-links .link {
     font-family: "Roboto", sans-serif;
     color: #429093;
     font-weight: 700;
-    width: 70px; }
+    width: 70px;
+    cursor: pointer; }
     .nav-links .link:nth-child(-n+5) {
       margin-bottom: 25px; }
+      @media (min-width: 50em) {
+        .nav-links .link:nth-child(-n+5) {
+          color: #edfdff;
+          margin-bottom: 0px;
+          margin-right: 30px;
+          width: fit-content; } }
 
 .landBackground {
   display: flex;
@@ -90,138 +145,195 @@
   position: relative;
   padding-top: 150px;
   width: 100%;
-  background: #429093; }
-  @media (max-width: 37.5em) {
+  background: #429093;
+  height: 25em;
+  clip-path: polygon(50% 0, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0); }
+  @media (min-width: 50em) {
     .landBackground {
-      height: 25em;
-      clip-path: polygon(50% 0, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0); } }
+      flex-direction: row;
+      justify-content: center; } }
 
-@media (max-width: 37.5em) {
-  .contact {
-    position: relative;
-    margin-left: 20px; } }
+.contact {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 20px; }
+  @media (min-width: 37.5em) {
+    .contact {
+      margin: 0 70px; } }
+  @media (min-width: 50em) {
+    .contact {
+      margin: unset;
+      height: 250px;
+      justify-content: center;
+      margin-left: 30px; } }
 
 .name {
   font-family: "Noto Sans", sans-serif;
   color: #edfdff;
-  font-size: 40px; }
+  font-size: 50px; }
+
+.digits {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 65em) {
+    .digits {
+      flex-direction: row;
+      margin-top: 5px; } }
 
 .contactInfo {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  color: #edfdff; }
-  @media (max-width: 37.5em) {
-    .contactInfo {
-      display: flex;
-      flex-direction: column;
-      font-size: 15px; } }
+  color: #edfdff;
+  font-size: 20px;
+  cursor: pointer; }
+  .contactInfo.number {
+    width: 140px; }
+  .contactInfo.divider {
+    display: none; }
+    @media (min-width: 65em) {
+      .contactInfo.divider {
+        display: block;
+        margin: 0 10px; } }
+  .contactInfo.email {
+    width: 270px; }
 
 .headshot {
-  position: absolute;
-  margin-left: 180px;
-  margin-top: -20px;
-  border-radius: 50%; }
-  @media (max-width: 37.5em) {
+  position: relative;
+  margin: 0 20px;
+  border-radius: 50%;
+  width: 150px;
+  height: auto; }
+  @media (min-width: 37.5em) {
     .headshot {
-      position: relative;
-      margin-left: 20px;
-      margin-top: 0;
-      width: 150px;
-      height: auto; } }
+      margin: 0 70px; } }
+  @media (min-width: 50em) {
+    .headshot {
+      margin: unset;
+      width: 250px;
+      height: 250px; } }
 
 .background {
   position: relative;
-  padding-top: 150px;
-  margin-top: -85px;
-  width: 100%; }
-  .background.whiteBack {
-    background: #edfdff; }
-  @media (max-width: 37.5em) {
-    .background {
-      height: 25em;
-      clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0); } }
+  padding-top: 100px;
+  margin-top: -75px;
+  width: 100%;
+  height: 25em;
+  clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0); }
 
 .content {
   margin: 0 20px; }
+  @media (min-width: 37.5em) {
+    .content {
+      margin: 0 70px; } }
+  @media (min-width: 50em) {
+    .content {
+      margin: 0 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
 
-.blueTitle {
-  position: relative;
-  font-family: "Noto Sans", sans-serif;
-  color: #429093;
-  font-size: 25px; }
-  @media (max-width: 37.5em) {
-    .blueTitle.aboutMe {
-      margin-top: 50px; } }
+.aboutMe {
+  margin-top: 50px; }
+  @media (min-width: 37.5em) {
+    .aboutMe {
+      margin-top: 100px; } }
 
 .smallContent {
   position: relative;
   font-family: "Roboto", sans-serif;
-  color: #429093; }
-  @media (max-width: 37.5em) {
+  color: #429093;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 10px; }
+  @media (min-width: 50em) {
     .smallContent {
-      font-size: 15px; } }
+      font-size: 20px;
+      line-height: 25px; } }
+  @media (min-width: 50em) {
+    .smallContent.paragraph {
+      width: 80%; } }
 
-.blueBack {
-  background: #429093; }
+.skill {
+  margin: 0 20px 10px; }
+  @media (min-width: 37.5em) {
+    .skill {
+      margin: 0 70px 10px; } }
+  @media (min-width: 50em) {
+    .skill {
+      margin: 30px 0 0;
+      display: flex;
+      justify-content: center; } }
 
-.whiteTitle {
-  position: relative;
-  font-family: "Noto Sans", sans-serif;
-  color: #edfdff;
-  font-size: 25px; }
-  .whiteTitle.skill {
-    margin: -50px 20px 10px; }
-
-@media (max-width: 37.5em) {
-  .iconSection {
-    display: grid;
-    grid: auto-flow/repeat(auto-fill, minmax(100px, 1fr));
-    grid-gap: 20px; } }
+.iconSection {
+  display: grid;
+  grid: repeat(3, 1fr)/repeat(3, 1fr);
+  grid-gap: 10px; }
+  @media (min-width: 50em) {
+    .iconSection {
+      display: flex;
+      justify-content: space-evenly;
+      width: 90%;
+      margin: 50px auto; } }
 
 .oneSkill {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media (max-width: 37.5em) {
-    .oneSkill {
-      margin: 5px; } }
+
+.skillIcon {
+  width: 50px;
+  height: 50px; }
+
+.project {
+  height: 40em;
+  clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0); }
+
+@media (min-width: 50em) {
+  .one {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
+
+.smallName {
+  font-size: 20px; }
+  @media (min-width: 50em) {
+    .smallName {
+      font-size: 25px; } }
+
+.topSpace {
+  margin-top: 20px; }
 
 @media (max-width: 37.5em) {
-  .skillIcon {
-    width: 50px;
-    height: 50px; } }
-
-.smallTitle {
-  font-family: "Roboto", sans-serif;
-  color: #edfdff;
-  text-align: center; }
-  @media (max-width: 37.5em) {
-    .smallTitle {
-      font-size: 15px;
-      margin: 5px; } }
-
-@media (max-width: 37.5em) {
-  .project {
+  .noSpace {
     margin-top: -50px; } }
 
-.projectName {
-  font-size: 15px; }
+.projectLink {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #429093;
+  cursor: pointer; }
 
 .blueText {
   color: #429093; }
 
-@media (max-width: 37.5em) {
-  .imgSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto; } }
-
-@media (max-width: 37.5em) {
-  .imgSection .images {
-    width: 300px;
-    height: auto; } }
+.experience {
+  height: 30em;
+  clip-path: polygon(50% 13%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0); }
+  @media (max-width: 37.5em) {
+    .experience {
+      clip-path: polygon(50% 13%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0); } }
 
 .whiteText {
   color: #edfdff; }
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background: #429093;
+  z-index: 100; }

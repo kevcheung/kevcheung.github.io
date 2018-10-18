@@ -1,3 +1,11 @@
+.experience{
+    height: 30em;
+    clip-path: polygon(50% 13%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    // z-index: 1;
+    @include break(mobile){
+        clip-path: polygon(50% 13%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    }
+}
 .whiteText{
     color: $main-color;
 }

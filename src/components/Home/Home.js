@@ -5,6 +5,7 @@ import About from '../About/About.js';
 import Skills from '../Skills/Skills.js';
 import Projects from '../Projects/Projects.js';
 import Experience from '../Experience/Experience.js';
+import Footer from '../Footer/Footer.js';
 
 class Home extends Component {
     render() {
@@ -16,6 +17,7 @@ class Home extends Component {
                 <Skills/>
                 <Projects/>
                 <Experience/>
+                <Footer/>
             </div>
         );
     }

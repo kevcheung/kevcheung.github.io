@@ -21,17 +21,17 @@ class Experience extends Component {
     render() {
         let displayExp;
         displayExp = this.state.projects.map(({name, time, description}) => (
-                <div className='oneProject'>
-                    <h1 className='smallTitle company'>{name}</h1>
-                    <h2 className='smallTitle time'>{time}</h2>
-                    <p className='smallContent whiteText'>{description}</p>
+                <div className='one'>
+                    <h1 className='blueTitle smallName whiteText topSpace'>{name}</h1>
+                    <h2 className='smallContent whiteText'>{time}</h2>
+                    <p className='smallContent whiteText paragraph'>{description}</p>
                 </div>
             )
         )
         return (
-            <div className='background blueBack'>
+            <div className='background blueBack experience'>
                 <div className='content'>
-                    <h1 className='whiteTitle expTitle'>Experience</h1>
+                    <h1 className='whiteTitle'>Experience</h1>
                     {displayExp}
                 </div>
             </div>

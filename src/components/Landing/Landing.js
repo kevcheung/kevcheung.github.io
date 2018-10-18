@@ -8,8 +8,11 @@ class Landing extends Component {
                     <img className='headshot' src={headshot} alt="headshot"/>
                 <div className='contact'>
                     <h1 className='name'>Kevin Cheung</h1>
-                    <a className='contactInfo' href='tel:4698267986'>(469) 826-7986</a>
-                    <a className='contactInfo' href='mailto:kevinchikitcheung@gmail.com'>kevinchikitcheung@gmail.com</a>
+                        <div className='digits'>
+                            <a className='contactInfo number' href='tel:4698267986'>(469) 826-7986</a>
+                            <h2 className='contactInfo divider'>|</h2>
+                            <a className='contactInfo email' href='mailto:kevinchikitcheung@gmail.com'>kevinchikitcheung@gmail.com</a>
+                        </div>
                 </div>
             </div>
         );
