@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.3",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.9.3",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
@@ -15,7 +16,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "watch": "node-sass sass/main.scss src/App.css -w",
-    "compile:sass": "node-sass sass/main.scss src/App.css"
+    "compile:sass": "node-sass sass/main.scss src/App.css",
+    "homepage": "https://kevcheung.github.io",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "browserslist": [
     ">0.2%",
