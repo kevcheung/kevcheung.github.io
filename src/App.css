@@ -190,6 +190,9 @@
   .contactInfo.number {
     width: 140px;
     margin: 5px 0; }
+    @media (min-width: 65em) {
+      .contactInfo.number {
+        margin: unset; } }
   .contactInfo.divider {
     display: none; }
     @media (min-width: 65em) {

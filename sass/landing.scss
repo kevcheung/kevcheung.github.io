@@ -59,6 +59,9 @@
     &.number{
         width: 140px;
         margin: 5px 0;
+        @include break(desktop){
+            margin: unset;
+        }
     }
     &.divider{
         display: none;
