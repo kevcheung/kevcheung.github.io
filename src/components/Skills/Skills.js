@@ -64,8 +64,8 @@ class Skills extends Component {
     }
     render() {
         let displaySkill;
-        displaySkill = this.state.skills.map(({skill, img, url}) => (
-                <div className='oneSkill'>
+        displaySkill = this.state.skills.map(({skill, img, url}, index) => (
+                <div className='oneSkill' key={index}>
                     <a href={url}><img className='skillIcon' src={img} alt={skill}/></a>
                     <h5 className='smallTitle'>{skill}</h5>
                 </div>

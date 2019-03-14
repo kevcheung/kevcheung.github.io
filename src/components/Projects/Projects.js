@@ -36,8 +36,8 @@ class Projects extends Component {
     }
     render() {
         let projectDisplay;
-        projectDisplay = this.state.projects.map(({name, description, technologies, img1, img2, img3, url, github}) => (
-                <div className='one'>
+        projectDisplay = this.state.projects.map(({name, description, technologies, img1, img2, img3, url, github}, index) => (
+                <div className='one' key={index}>
                         <h1 className='blueTitle smallName topSpace'>{name}</h1>
                         <h2 className='smallContent'>{technologies}</h2>
                         <p className='smallContent paragraph'>{description}</p>

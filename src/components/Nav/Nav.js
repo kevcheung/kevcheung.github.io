@@ -45,7 +45,7 @@ class Nav extends Component{
     render(){
         let nav;
         nav = <div className='nav'>
-                        <img className='logo' onClick={this.homeScroll} src={logo}/>
+                        <img className='logo' onClick={this.homeScroll} src={logo} alt='logo'/>
                         {this.state.menuSlide && (
                             <div onClick={() => this.setState({ menuSlide: false })} className='mobile-site'/>
                         )}
